@@ -3,6 +3,10 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class LogInPage {
 
@@ -18,10 +22,11 @@ public class LogInPage {
     }
 
     public void enterUsername() {
-        driver.findElement(username_id).sendKeys("swmsomie@gmail.com");
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(username));
+        driver.findElement(username).sendKeys("swmsomie@gmail.com");
     }
 
     public void enterPassword() {
-        driver.findElement(password_id).sendKeys("Siya@MsM87");
+        driver.findElement(password).sendKeys("Siya@MsM87");
     }
 }
