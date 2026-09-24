@@ -29,4 +29,9 @@ public class HomePage {
         driver.findElement(mainLogInButton_xpath).click();
     }
 
+    public void checkIfNdosiWebsiteIsLoaded() {
+    }
+
+    public void clickHomeLoginButton() {
+    }
 }

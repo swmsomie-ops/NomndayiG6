@@ -1,5 +1,6 @@
 package org.example;
 
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,15 +16,18 @@ public class LogInTest {
         driver.get("https://ndosisimplifiedautomation.vercel.app");
         Thread.sleep(2000);
     }
+
     @Test
     public void clickLogInButton() {
         driver.findElement(By.xpath("//*[@id=\"app-root\"]/nav/div[1]/div[3]/button/span[2]")).click();
     }
     public void enterUsername() {
+
         driver.findElement(By.id("login-email")).sendKeys("swmsomie@gmail.com");
     }
 
     public void enterPassword() {
+
         driver.findElement(By.id("login-password")).sendKeys("Siya@MsM87");
     }
 
