@@ -1,9 +1,11 @@
 package Utils;
 
+import ExtentReport.Listener;
 import Pages.Dashboard;
 import Pages.HomePage;
 import Pages.LogInPage;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestNGListener;
 
 public class Base {
 
@@ -11,5 +13,5 @@ public class Base {
     public HomePage HomePage = new HomePage(driver);
     public LogInPage logInPage = new LogInPage(driver);
     public Dashboard dashboard = new Dashboard(driver);
-
+    public Listener listener = new Listener();
 }

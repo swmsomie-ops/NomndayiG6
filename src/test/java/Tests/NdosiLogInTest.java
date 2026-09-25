@@ -14,5 +14,11 @@ public class NdosiLogInTest extends Base {
         logInPage.enterUsername();
         logInPage.enterPassword();
         dashboard.verifyLoginWasSuccessful();
+        dashboard.clickMenu();
+        dashboard.clickLogout();
+        dashboard.ArletcloseWindow();
+
+
+
     }
 }
