@@ -13,9 +13,6 @@ public class NdosiLogInTest extends Base {
         HomePage.clickHomeLoginButton();
         logInPage.enterUsername();
         logInPage.enterPassword();
-
-
-
-
+        dashboard.verifyLoginButton();
     }
 }
