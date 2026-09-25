@@ -13,6 +13,9 @@ public class Listener implements ITestNGListener {
     private static ExtentReports extent;
     private static ExtentTest extentTest;
 
+    public @interface Override {
+    }
+
     @Override
     public void onTestStart(ITestResult result) {
         extentTest = extent.createTest(result.getMethod().getMethodName());
