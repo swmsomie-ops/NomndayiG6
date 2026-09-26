@@ -22,7 +22,7 @@ public class Dashboard {
     }
 
     public void verifyLoginWasSuccessful() {
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(dashboard_xpath));
+        new WebDriverWait (driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(dashboard_xpath));
         driver.findElement(dashboard_xpath).isDisplayed();
     }
 

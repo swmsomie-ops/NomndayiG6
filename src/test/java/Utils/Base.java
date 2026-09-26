@@ -1,11 +1,11 @@
 package Utils;
 
-import ExtentReport.Listener;
+import ExtentReports.Listener;
 import Pages.Dashboard;
 import Pages.HomePage;
 import Pages.LogInPage;
+import com.aventstack.extentreports.model.Test;
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestNGListener;
 
 public class Base {
 
@@ -14,4 +14,5 @@ public class Base {
     public LogInPage logInPage = new LogInPage(driver);
     public Dashboard dashboard = new Dashboard(driver);
     public Listener listener = new Listener();
+
 }
