@@ -16,6 +16,6 @@ public class NdosiLogInTest extends Base {
         dashboard.verifyLoginWasSuccessful();
         dashboard.clickMenu();
         dashboard.clickLogout();
-        dashboard.ArletcloseWindow();
+        dashboard.AlertcloseWindow();
     }
 }

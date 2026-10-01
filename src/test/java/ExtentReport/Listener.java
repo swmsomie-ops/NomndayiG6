@@ -3,6 +3,7 @@ package ExtentReport;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import org.jspecify.annotations.NonNull;
 import org.testng.ITestContext;
 import org.testng.ITestNGListener;
 import org.testng.ITestResult;
@@ -12,7 +13,6 @@ public class Listener implements ITestNGListener {
 
     private static ExtentReports extent;
     private static ExtentTest extentTest;
-
     public @interface Override {
     }
 
@@ -28,7 +28,7 @@ public class Listener implements ITestNGListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        extentTest.log(Status.PASS, "Test Case: "+ result.getMethod().getMethodName()+"Has Passed");
+        extentTest.log(Status.PASS, "Test Passed: "+ result.getMethod().getMethodName()+"Has Passed");
     }
 
     @Override
