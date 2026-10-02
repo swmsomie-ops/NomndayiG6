@@ -27,9 +27,11 @@ public class Dashboard {
     public void clickMenu() {
         driver.findElement(menu_xpath).click();
     }
+
     public void clickLogout() {
         driver.findElement(logout_xpath).click();
     }
+
     public void AlertcloseWindow() {
         new WebDriverWait(driver, Duration.ofSeconds(10))
         .until(ExpectedConditions.alertIsPresent());
