@@ -1,15 +1,21 @@
 package ExtentReport;
 
+import Utils.TakenScreenShots;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import org.jspecify.annotations.NonNull;
 import org.testng.ITestContext;
-import org.testng.ITestNGListener;
+import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.sql.Driver;
 
-public class Listener implements ITestNGListener {
+import static Utils.BrowserFactory.driver;
+
+
+public class Listener implements ITestListener {
 
     private static ExtentReports extent;
     private static ExtentTest extentTest;
@@ -24,6 +30,16 @@ public class Listener implements ITestNGListener {
     @Override
     public void onTestFailure(ITestResult result) {
         extentTest.log(Status.FAIL, "Test Case: "+ result.getMethod().getMethodName()+"Has Failed");
+        extentTest.log(Status.FAIL, result.getThrowable().getMessage());
+
+        try {
+            String screenshotName = result.getMethod().getMethodName()+"png";
+            TakenScreenShots.TakeSnapShots(driver,result.getMethod().getMethodName());
+            extentTest.addScreenCaptureFromPath(Paths.get
+                    ("ScreenShots",screenshotName).toString().replace("\\","/"),result.getMethod().getMethodName());
+        }catch (IOException e){
+            throw new IllegalStateException("Failed to take screenshot for test case:"+result.getMethod().getMethodName(), e);
+        }
     }
 
     @Override

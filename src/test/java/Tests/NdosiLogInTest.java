@@ -3,6 +3,7 @@ package Tests;
 import Pages.Dashboard;
 import Pages.LogInPage;
 import Utils.Base;
+import org.junit.AfterClass;
 import org.testng.annotations.Test;
 
 public class NdosiLogInTest extends Base {
@@ -17,5 +18,11 @@ public class NdosiLogInTest extends Base {
         dashboard.clickMenu();
         dashboard.clickLogout();
         dashboard.AlertcloseWindow();
+    }
+    @AfterClass
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }
