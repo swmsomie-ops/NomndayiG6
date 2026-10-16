@@ -1,8 +1,6 @@
-package Tests;
+package tests;
 
-import Pages.Dashboard;
-import Pages.LogInPage;
-import Utils.Base;
+import utils.Base;
 import org.junit.AfterClass;
 import org.testng.annotations.Test;
 

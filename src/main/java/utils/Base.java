@@ -1,10 +1,9 @@
-package Utils;
+package utils;
 
 import ExtentReports.Listener;
 import Pages.Dashboard;
 import Pages.HomePage;
 import Pages.LogInPage;
-import com.aventstack.extentreports.model.Test;
 import org.openqa.selenium.WebDriver;
 
 public class Base {

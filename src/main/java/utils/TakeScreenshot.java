@@ -1,21 +1,21 @@
-package Utils;
+package utils;
 
 import org.apache.commons.io.FileUtils;
-import org.jspecify.annotations.NonNull;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 
 import java.io.File;
 import java.io.IOException;
 
-public class TakenScreenShots {
+public class TakeScreenShots {
 
     private static final String screenshotDir = System.getProperty(("user.dir")+ File.separator+"NdosiReports"+File.separator+"ScreenShots");
 
-    public static @NonNull String TakeSnapShots(WebDriver driver, String screenshotName) throws IOException {
+    public static String takeSnapShot(WebDriver driver, String screenshotName) throws IOException {
 
-        TakenScreenShots takenScreenShots = (TakenScreenShots) driver;
+        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File src = takesScreenshot.getScreenshotAs(OutputType.FILE);
         File destinationDir = new File(screenshotDir);
 
@@ -28,4 +28,27 @@ public class TakenScreenShots {
 
         return destination.getAbsolutePath();
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
