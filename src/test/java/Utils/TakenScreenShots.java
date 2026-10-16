@@ -1,6 +1,7 @@
 package Utils;
 
 import org.apache.commons.io.FileUtils;
+import org.jspecify.annotations.NonNull;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 
@@ -12,7 +13,7 @@ public class TakenScreenShots {
 
     private static final String screenshotDir = System.getProperty(("user.dir")+ File.separator+"NdosiReports"+File.separator+"ScreenShots");
 
-    public static String TakeSnapShots(WebDriver driver, String screenshotName) throws IOException {
+    public static @NonNull String TakeSnapShots(WebDriver driver, String screenshotName) throws IOException {
 
         TakenScreenShots takenScreenShots = (TakenScreenShots) driver;
         File src = takesScreenshot.getScreenshotAs(OutputType.FILE);

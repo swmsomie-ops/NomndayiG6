@@ -4,19 +4,17 @@ import Utils.TakenScreenShots;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-<<<<<<< HEAD
 import org.openqa.selenium.WebDriver;
-=======
->>>>>>> 5204f68a6c7b6951c7956744d8096a1ec863f3a8
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.sql.Driver;
 
-import static Utils.BrowserFactory.driver;
+<<<<<<<HEAD
+=======
+        >>>>>>>5204f68a6c7b6951c7956744d8096a1ec863f3a8
 
 
 public class Listener implements ITestListener {

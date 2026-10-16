@@ -27,7 +27,18 @@ public class BrowserLoginTest {
 
     @Test
     public void testLoginButtonVisible() {
-        WebElement loginButton = wait.until(ExpectedConditions.visibilityOfElementLocated(
+        WebElement loginButton = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//*[@id=\"app-root\"]/nav/div[1]/div[3]/button/span[2]")));
+                   Assert,assertTrue(loginButton.isDisplayed(), "Login button should be visible");
     }
+
+    @Test
+    public void testClickLoginButton() {
+    WebElement loginButton = wait.until(
+        ExpectedConditions.elementToBeClickable(
+            By.xpath("//*[@id="app-root"]/nav/div[1]/div[3]/button/span[1]")
+    );
+    }
+    
 }
