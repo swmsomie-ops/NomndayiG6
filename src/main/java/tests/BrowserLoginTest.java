@@ -1,20 +1,18 @@
 package tests;
 
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import utils.BrowserFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+
+
 
 import java.time.Duration;
-
-import static org.testng.Assert.assertTrue;
 
 public class BrowserLoginTest {
 
@@ -24,7 +22,7 @@ public class BrowserLoginTest {
     private  static final String VALID_EMAIL = "swmsomie@gmail.com";
     private static final String VALID_PASSWORD = "Siya@MsM87";
 
-    @Before
+    @BeforeTest
     public void setup() {
         driver = BrowserFactory.startBrowser("chrome", BASE_URL);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -42,7 +40,6 @@ public class BrowserLoginTest {
     public void testClickLoginButton() {
     WebElement loginButton = wait.until(
         ExpectedConditions.elementToBeClickable(
-            By.xpath("//*[@id='app-root']/nav/div[1]/div[3]/button/span[1]"));
+            By.xpath("//*[@id='app-root']/nav/div[1]/div[3]/button/span[1]")));
     }
-    
 }

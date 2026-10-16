@@ -3,8 +3,11 @@ package ExtentReports;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import org.testng.ITestResult;
+import org.testng.ITestListener;
+import org.testng.ITestContext;
 
-public class Listener {
+public class Listener implements ITestListener {
 
     private static ExtentReports extent;
     private static ExtentTest extentTest;
