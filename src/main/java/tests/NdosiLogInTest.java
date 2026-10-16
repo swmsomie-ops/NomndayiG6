@@ -1,5 +1,6 @@
 package tests;
 
+import org.openqa.selenium.WebDriver;
 import utils.Base;
 import org.junit.AfterClass;
 import org.testng.annotations.Test;
@@ -19,8 +20,6 @@ public class NdosiLogInTest extends Base {
     }
     @AfterClass
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        WebDriver driver = null;
     }
 }

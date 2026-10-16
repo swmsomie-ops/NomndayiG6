@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class TakeScreenShots {
 
-    private static final String screenshotDir = System.getProperty(("user.dir")+ File.separator+"NdosiReports"+File.separator+"ScreenShots");
+    private static final String screenshotDir = System.getProperty(("user.dir") + File.separator + "NdosiReports" + File.separator + "ScreenShots");
 
     public static String takeSnapShot(WebDriver driver, String screenshotName) throws IOException {
 
@@ -20,10 +20,10 @@ public class TakeScreenShots {
         File destinationDir = new File(screenshotDir);
 
         if (!destinationDir.exists() && !destinationDir.mkdirs()) {
-            throw new IOException("Unable to create screenshot directory"+destinationDir.getAbsolutePath());
+            throw new IOException("Unable to create screenshot directory" + destinationDir.getAbsolutePath());
         }
 
-        File destination = new File(destinationDir. screenshotName+"png");
+        File destination = new File(destinationDir.screenshotName + ".png");
         FileUtils.copyFile(src, destination);
 
         return destination.getAbsolutePath();
@@ -51,4 +51,4 @@ public class TakeScreenShots {
 
 
 
-}
+

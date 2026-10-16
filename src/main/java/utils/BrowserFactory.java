@@ -10,12 +10,12 @@ public class BrowserFactory {
 
     static WebDriver driver;
 
-    public static  WebDriver startBrowser(String browserChoice, String url) {
+    public static WebDriver startBrowser(String browserChoice, String url) {
 
-        if ( (browserChoice.equalsIgnoreCase("Chrome"))) {
+        if ((browserChoice.equalsIgnoreCase("Chrome"))) {
             driver = new ChromeDriver();
 
-        } else  if (browserChoice.equalsIgnoreCase("Firefox")) {
+        } else if (browserChoice.equalsIgnoreCase("Firefox")) {
             driver = new FirefoxDriver();
 
         } else if (browserChoice.equalsIgnoreCase("Edge")) {
