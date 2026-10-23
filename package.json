@@ -1,0 +1,23 @@
+{
+  "name": "projectstoreg6",
+  "version": "1.0.0",
+  "description": "git clone https://github.com/Siyabonga_Msomi/www.linkedin.com/in/siyabonga-msomi-74247a2ab.gitcd singilar-automation\r mvn clean install",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swmsomie-ops/NomndayiG6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/swmsomie-ops/NomndayiG6/issues"
+  },
+  "homepage": "https://github.com/swmsomie-ops/NomndayiG6#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5"
+  }
+}
